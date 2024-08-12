@@ -22,6 +22,8 @@ jobs:
         with:
           use-public-rspm: true
 
+      # Install R packages
+      - uses: r-lib/actions/setup-r-dependencies@v2
 
       - name: Run news_api.R and save JSON output
         run: Rscript news_api.R > data/$(date +%Y-%m-%d).json
