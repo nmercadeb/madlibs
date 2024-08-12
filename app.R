@@ -1,9 +1,9 @@
 library(shiny)
 library(useself)
 
-cat("LOG --- Get back trace \n", file = stderr())
-rlang::global_entrace()
-options(rlang_backtrace_on_error = "full")
+# cat("LOG --- Get back trace \n", file = stderr())
+# rlang::global_entrace()
+# options(rlang_backtrace_on_error = "full")
 
 cat("LOG --- Generate story \n", file = stderr())
 generate_story <- function(noun, verb, adjective, adverb) {
