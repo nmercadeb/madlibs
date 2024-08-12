@@ -22,8 +22,11 @@ jobs:
         with:
           use-public-rspm: true
 
+
       - name: Run news_api.R and save JSON output
         run: Rscript news_api.R > data/$(date +%Y-%m-%d).json
+        env:
+          NEWS_API_KEY: ${{ secrets.NEWS_API_KEY }}
 
 
       # Publish rmd/ to GitHub pages
